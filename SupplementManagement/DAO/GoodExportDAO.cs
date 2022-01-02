@@ -100,22 +100,25 @@ namespace SupplementManagement.DAO
             }
         }
 
-        public void confirmExport(long id)
+        public void confirmExport(string username,long id)
         {
-            string query = "Exec confirmExport @id ";
-            int result = DataProvider.Instance.ExecuteNonQuery(query, new object[] { id });
+            Account staff = AccountDAO.Instance.GetAccountByUsername(username);
+            string query = "Exec confirmExport @id , @sid ";
+            int result = DataProvider.Instance.ExecuteNonQuery(query, new object[] { id , staff.Id });
         }
 
-        public void cancelExport(long id)
+        public void cancelExport(string username,long id)
         {
-            string query = "Exec cancelExport @id ";
-            int result = DataProvider.Instance.ExecuteNonQuery(query, new object[] { id });
+            Account staff = AccountDAO.Instance.GetAccountByUsername(username);
+            string query = "Exec cancelExport @id , @sid ";
+            int result = DataProvider.Instance.ExecuteNonQuery(query, new object[] { id , staff.Id });
         }
 
-        public void doneExport(long id)
+        public void doneExport(string username,long id)
         {
-            string query = "Exec doneExport @id ";
-            int result = DataProvider.Instance.ExecuteNonQuery(query, new object[] { id });
+            Account staff = AccountDAO.Instance.GetAccountByUsername(username);
+            string query = "Exec doneExport @id , @sid ";
+            int result = DataProvider.Instance.ExecuteNonQuery(query, new object[] { id , staff.Id });
         }
     }
 }

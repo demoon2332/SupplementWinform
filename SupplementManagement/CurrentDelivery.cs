@@ -72,14 +72,14 @@ namespace SupplementManagement
 
         private void doneDelivery()
         {
-            GoodExportDAO.Instance.doneExport(currentBillID);
+            GoodExportDAO.Instance.doneExport(username,currentBillID);
             loadShippingOrder();
             listViewDetail.Items.Clear();
         }
 
         private void cancelDelivery()
         {
-            GoodExportDAO.Instance.cancelExport(currentBillID);
+            GoodExportDAO.Instance.cancelExport(username,currentBillID);
             loadShippingOrder();
             listViewDetail.Items.Clear();
         }

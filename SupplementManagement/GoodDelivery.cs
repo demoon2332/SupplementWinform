@@ -75,33 +75,34 @@ namespace SupplementManagement
 
         private void confirmImport()
         {
-            GoodExportDAO.Instance.confirmExport(currentBillID);
+            GoodExportDAO.Instance.confirmExport(username,currentBillID);
             loadWaitingOrder();
             listViewDetail.Items.Clear();
         }
 
         private void destroyImport()
         {
-            GoodExportDAO.Instance.cancelExport(currentBillID);
+            GoodExportDAO.Instance.cancelExport(username,currentBillID);
             loadWaitingOrder();
             listViewDetail.Items.Clear();
         }
 
         private void updateStorage()
         {
-
+            MessageBox.Show("ass");
             foreach (ListViewItem i in listViewDetail.Items)
             {
                 long id = Int64.Parse(i.Tag.ToString());
                 int quantity = -Int16.Parse(i.SubItems[3].Text);
                 ProductDAO.Instance.updateStorage(id, quantity);
+                MessageBox.Show("ID :"+id.ToString()+"Quantity : " + quantity.ToString());
             }
         }
 
         private void checkOut()
         {
-            confirmImport();
             updateStorage();
+            confirmImport();
         }
 
 
