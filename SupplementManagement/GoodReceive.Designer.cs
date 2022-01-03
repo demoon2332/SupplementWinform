@@ -50,12 +50,12 @@ namespace SupplementManagement
             this.btnAddItem = new System.Windows.Forms.Button();
             this.selectItemBox = new System.Windows.Forms.ComboBox();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
             this.clearBtn = new System.Windows.Forms.Button();
             this.btnDeleteItem = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.totalPayTxt = new System.Windows.Forms.TextBox();
             this.btnCheckIn = new System.Windows.Forms.Button();
-            this.label6 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.quantityBox)).BeginInit();
@@ -140,7 +140,7 @@ namespace SupplementManagement
             // 
             // panel4
             // 
-            this.panel4.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.panel4.Controls.Add(this.label5);
             this.panel4.Controls.Add(this.selectTypeBox);
             this.panel4.Controls.Add(this.label4);
@@ -255,7 +255,7 @@ namespace SupplementManagement
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.panel3.Controls.Add(this.label6);
             this.panel3.Controls.Add(this.clearBtn);
             this.panel3.Controls.Add(this.btnDeleteItem);
@@ -266,6 +266,16 @@ namespace SupplementManagement
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1040, 99);
             this.panel3.TabIndex = 10;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(268, 56);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(62, 27);
+            this.label6.TabIndex = 21;
+            this.label6.Text = "VNĐ";
             // 
             // clearBtn
             // 
@@ -322,16 +332,6 @@ namespace SupplementManagement
             this.btnCheckIn.Text = "Check In";
             this.btnCheckIn.UseVisualStyleBackColor = false;
             this.btnCheckIn.Click += new System.EventHandler(this.btnCheckIn_Click);
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(268, 56);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(62, 27);
-            this.label6.TabIndex = 21;
-            this.label6.Text = "VNĐ";
             // 
             // GoodReceive
             // 

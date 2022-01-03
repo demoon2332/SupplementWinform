@@ -30,7 +30,9 @@ namespace SupplementManagement
         private void InitializeComponent()
         {
             this.panel4 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
             this.username2 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.customerTextBox = new System.Windows.Forms.TextBox();
@@ -59,8 +61,6 @@ namespace SupplementManagement
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader11 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -68,7 +68,7 @@ namespace SupplementManagement
             // 
             // panel4
             // 
-            this.panel4.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.panel4.Controls.Add(this.label3);
             this.panel4.Controls.Add(this.username2);
             this.panel4.Controls.Add(this.label4);
@@ -76,6 +76,16 @@ namespace SupplementManagement
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1286, 94);
             this.panel4.TabIndex = 15;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(701, 57);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(156, 27);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "Detail Receipt:";
             // 
             // username2
             // 
@@ -87,9 +97,20 @@ namespace SupplementManagement
             this.username2.TabIndex = 19;
             this.username2.Text = "Username:";
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Gold;
+            this.label4.Location = new System.Drawing.Point(17, 50);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(216, 38);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "Waitling List:";
+            // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.panel3.Controls.Add(this.label2);
             this.panel3.Controls.Add(this.customerTextBox);
             this.panel3.Controls.Add(this.orderDateTxt);
@@ -350,26 +371,6 @@ namespace SupplementManagement
             // 
             this.columnHeader11.Text = "IntoMoney";
             this.columnHeader11.Width = 141;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(701, 57);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(156, 27);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "Detail Receipt:";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(17, 57);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(141, 27);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Waitling List:";
             // 
             // GoodDelivery
             // 

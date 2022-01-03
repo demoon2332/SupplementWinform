@@ -38,6 +38,7 @@ namespace SupplementManagement
             this.panel2 = new System.Windows.Forms.Panel();
             this.usernameTxt = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -45,6 +46,8 @@ namespace SupplementManagement
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.btnExit);
             this.panel1.Controls.Add(this.btnLogin);
             this.panel1.Controls.Add(this.panel3);
@@ -80,7 +83,7 @@ namespace SupplementManagement
             // 
             this.panel3.Controls.Add(this.passwordTxt);
             this.panel3.Controls.Add(this.label2);
-            this.panel3.Location = new System.Drawing.Point(12, 173);
+            this.panel3.Location = new System.Drawing.Point(12, 201);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(776, 100);
             this.panel3.TabIndex = 1;
@@ -109,7 +112,7 @@ namespace SupplementManagement
             // 
             this.panel2.Controls.Add(this.usernameTxt);
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Location = new System.Drawing.Point(12, 64);
+            this.panel2.Location = new System.Drawing.Point(12, 95);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(776, 100);
             this.panel2.TabIndex = 0;
@@ -133,6 +136,17 @@ namespace SupplementManagement
             this.label1.TabIndex = 0;
             this.label1.Text = "Username:";
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Gold;
+            this.label3.Location = new System.Drawing.Point(125, 35);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(543, 43);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "Demoon Supplement - Login";
+            // 
             // fLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -144,6 +158,7 @@ namespace SupplementManagement
             this.Text = "Login";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.fLogin_FormClosing);
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -163,5 +178,6 @@ namespace SupplementManagement
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TextBox usernameTxt;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label3;
     }
 }

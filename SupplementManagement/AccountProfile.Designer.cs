@@ -197,6 +197,7 @@ namespace SupplementManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(819, 484);
             this.Controls.Add(this.resetPassBtn);
             this.Controls.Add(this.panel5);
@@ -205,6 +206,7 @@ namespace SupplementManagement
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
+            this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Name = "AccountProfile";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AccountProfile";

@@ -43,7 +43,6 @@ namespace SupplementManagement
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader11 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
@@ -59,6 +58,7 @@ namespace SupplementManagement
             this.totalPayTxt = new System.Windows.Forms.TextBox();
             this.doneBtn = new System.Windows.Forms.Button();
             this.usernameTxt = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -163,16 +163,6 @@ namespace SupplementManagement
             this.columnHeader11.Text = "IntoMoney";
             this.columnHeader11.Width = 141;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 49);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(130, 27);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Deliverying:";
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -185,7 +175,7 @@ namespace SupplementManagement
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.panel3.Controls.Add(this.label3);
             this.panel3.Controls.Add(this.customerTextBox);
             this.panel3.Controls.Add(this.orderDateTxt);
@@ -347,16 +337,27 @@ namespace SupplementManagement
             this.usernameTxt.TabIndex = 22;
             this.usernameTxt.Text = "Username:";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Gold;
+            this.label1.Location = new System.Drawing.Point(12, 29);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(239, 37);
+            this.label1.TabIndex = 23;
+            this.label1.Text = "Delivering List:";
+            // 
             // CurrentDelivery
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(1327, 655);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.usernameTxt);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.listViewDetail);
             this.Controls.Add(this.listViewBill);
             this.Name = "CurrentDelivery";
@@ -385,7 +386,6 @@ namespace SupplementManagement
         private System.Windows.Forms.ColumnHeader columnHeader4;
         private System.Windows.Forms.ColumnHeader columnHeader10;
         private System.Windows.Forms.ColumnHeader columnHeader11;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label3;
@@ -401,5 +401,6 @@ namespace SupplementManagement
         private System.Windows.Forms.TextBox totalPayTxt;
         private System.Windows.Forms.Button doneBtn;
         private System.Windows.Forms.Label usernameTxt;
+        private System.Windows.Forms.Label label1;
     }
 }

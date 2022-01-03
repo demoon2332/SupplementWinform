@@ -201,10 +201,10 @@ namespace SupplementManagement
             // 
             this.label4.AutoSize = true;
             this.label4.Enabled = false;
-            this.label4.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(24, 11);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(51, 33);
+            this.label4.Size = new System.Drawing.Size(53, 32);
             this.label4.TabIndex = 3;
             this.label4.Text = "To:";
             // 
@@ -229,10 +229,10 @@ namespace SupplementManagement
             // 
             this.label1.AutoSize = true;
             this.label1.Enabled = false;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(24, 12);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(82, 33);
+            this.label1.Size = new System.Drawing.Size(89, 32);
             this.label1.TabIndex = 2;
             this.label1.Text = "From:";
             // 
@@ -373,7 +373,7 @@ namespace SupplementManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(1509, 719);
             this.Controls.Add(this.getLastestBtn);
             this.Controls.Add(this.searchBtn);
