@@ -41,8 +41,8 @@ namespace SupplementManagement
             this.informationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.ImportTable = new System.Windows.Forms.DataGridView();
             this.ExportTable = new System.Windows.Forms.DataGridView();
+            this.ImportTable = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.endDateTime = new System.Windows.Forms.DateTimePicker();
@@ -65,10 +65,12 @@ namespace SupplementManagement
             this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.searchBtn = new System.Windows.Forms.Button();
             this.getLastestBtn = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.usernameStatistic = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ImportTable)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ExportTable)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ImportTable)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -101,34 +103,34 @@ namespace SupplementManagement
             this.accountToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1509, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(1539, 30);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // adminToolStripMenuItem
             // 
             this.adminToolStripMenuItem.Name = "adminToolStripMenuItem";
-            this.adminToolStripMenuItem.Size = new System.Drawing.Size(75, 24);
+            this.adminToolStripMenuItem.Size = new System.Drawing.Size(75, 26);
             this.adminToolStripMenuItem.Text = "Statistic";
             // 
             // goodReceiveToolStripMenuItem
             // 
             this.goodReceiveToolStripMenuItem.Name = "goodReceiveToolStripMenuItem";
-            this.goodReceiveToolStripMenuItem.Size = new System.Drawing.Size(115, 24);
+            this.goodReceiveToolStripMenuItem.Size = new System.Drawing.Size(115, 26);
             this.goodReceiveToolStripMenuItem.Text = "Good Receive";
             this.goodReceiveToolStripMenuItem.Click += new System.EventHandler(this.goodReceiveToolStripMenuItem_Click);
             // 
             // goodDeliveryToolStripMenuItem
             // 
             this.goodDeliveryToolStripMenuItem.Name = "goodDeliveryToolStripMenuItem";
-            this.goodDeliveryToolStripMenuItem.Size = new System.Drawing.Size(118, 24);
+            this.goodDeliveryToolStripMenuItem.Size = new System.Drawing.Size(118, 26);
             this.goodDeliveryToolStripMenuItem.Text = "Good Delivery";
             this.goodDeliveryToolStripMenuItem.Click += new System.EventHandler(this.goodDeliveryToolStripMenuItem_Click);
             // 
             // deliveryingGoodToolStripMenuItem
             // 
             this.deliveryingGoodToolStripMenuItem.Name = "deliveryingGoodToolStripMenuItem";
-            this.deliveryingGoodToolStripMenuItem.Size = new System.Drawing.Size(140, 24);
+            this.deliveryingGoodToolStripMenuItem.Size = new System.Drawing.Size(140, 26);
             this.deliveryingGoodToolStripMenuItem.Text = "Current Deliveries";
             this.deliveryingGoodToolStripMenuItem.Click += new System.EventHandler(this.deliveryingGoodToolStripMenuItem_Click);
             // 
@@ -138,7 +140,7 @@ namespace SupplementManagement
             this.informationToolStripMenuItem,
             this.logOutToolStripMenuItem});
             this.accountToolStripMenuItem.Name = "accountToolStripMenuItem";
-            this.accountToolStripMenuItem.Size = new System.Drawing.Size(77, 24);
+            this.accountToolStripMenuItem.Size = new System.Drawing.Size(77, 26);
             this.accountToolStripMenuItem.Text = "Account";
             // 
             // informationToolStripMenuItem
@@ -157,42 +159,42 @@ namespace SupplementManagement
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.ImportTable);
             this.panel2.Controls.Add(this.ExportTable);
-            this.panel2.Location = new System.Drawing.Point(0, 296);
+            this.panel2.Controls.Add(this.ImportTable);
+            this.panel2.Location = new System.Drawing.Point(12, 400);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1509, 425);
             this.panel2.TabIndex = 3;
-            // 
-            // ImportTable
-            // 
-            this.ImportTable.AllowUserToAddRows = false;
-            this.ImportTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ImportTable.Location = new System.Drawing.Point(0, 0);
-            this.ImportTable.Name = "ImportTable";
-            this.ImportTable.RowHeadersWidth = 51;
-            this.ImportTable.RowTemplate.Height = 24;
-            this.ImportTable.Size = new System.Drawing.Size(635, 419);
-            this.ImportTable.TabIndex = 3;
-            this.ImportTable.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ImportTable_CellClick);
             // 
             // ExportTable
             // 
             this.ExportTable.AllowUserToAddRows = false;
             this.ExportTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ExportTable.Location = new System.Drawing.Point(641, 0);
+            this.ExportTable.Location = new System.Drawing.Point(621, 0);
             this.ExportTable.Name = "ExportTable";
             this.ExportTable.RowHeadersWidth = 51;
             this.ExportTable.RowTemplate.Height = 24;
-            this.ExportTable.Size = new System.Drawing.Size(856, 422);
-            this.ExportTable.TabIndex = 2;
+            this.ExportTable.Size = new System.Drawing.Size(885, 419);
+            this.ExportTable.TabIndex = 4;
             this.ExportTable.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ExportTable_CellClick);
+            // 
+            // ImportTable
+            // 
+            this.ImportTable.AllowUserToAddRows = false;
+            this.ImportTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ImportTable.Location = new System.Drawing.Point(12, 0);
+            this.ImportTable.Name = "ImportTable";
+            this.ImportTable.RowHeadersWidth = 51;
+            this.ImportTable.RowTemplate.Height = 24;
+            this.ImportTable.Size = new System.Drawing.Size(603, 419);
+            this.ImportTable.TabIndex = 3;
+            this.ImportTable.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ImportTable_CellClick);
             // 
             // panel1
             // 
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.endDateTime);
-            this.panel1.Location = new System.Drawing.Point(12, 99);
+            this.panel1.Location = new System.Drawing.Point(21, 166);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(535, 53);
             this.panel1.TabIndex = 4;
@@ -220,7 +222,7 @@ namespace SupplementManagement
             // 
             this.panel3.Controls.Add(this.label1);
             this.panel3.Controls.Add(this.startDateTime);
-            this.panel3.Location = new System.Drawing.Point(12, 43);
+            this.panel3.Location = new System.Drawing.Point(21, 110);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(535, 53);
             this.panel3.TabIndex = 5;
@@ -248,15 +250,15 @@ namespace SupplementManagement
             // 
             this.panel4.Controls.Add(this.totalPay);
             this.panel4.Controls.Add(this.label);
-            this.panel4.Location = new System.Drawing.Point(12, 233);
+            this.panel4.Location = new System.Drawing.Point(21, 300);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(535, 57);
             this.panel4.TabIndex = 7;
             // 
             // totalPay
             // 
-            this.totalPay.Enabled = false;
             this.totalPay.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.totalPay.ForeColor = System.Drawing.Color.Red;
             this.totalPay.Location = new System.Drawing.Point(128, 12);
             this.totalPay.Name = "totalPay";
             this.totalPay.Size = new System.Drawing.Size(391, 34);
@@ -276,7 +278,7 @@ namespace SupplementManagement
             // panel5
             // 
             this.panel5.Controls.Add(this.detailListView);
-            this.panel5.Location = new System.Drawing.Point(596, 43);
+            this.panel5.Location = new System.Drawing.Point(617, 110);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(913, 247);
             this.panel5.TabIndex = 8;
@@ -350,7 +352,7 @@ namespace SupplementManagement
             // searchBtn
             // 
             this.searchBtn.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.searchBtn.Location = new System.Drawing.Point(12, 178);
+            this.searchBtn.Location = new System.Drawing.Point(21, 245);
             this.searchBtn.Name = "searchBtn";
             this.searchBtn.Size = new System.Drawing.Size(127, 48);
             this.searchBtn.TabIndex = 9;
@@ -361,7 +363,7 @@ namespace SupplementManagement
             // getLastestBtn
             // 
             this.getLastestBtn.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.getLastestBtn.Location = new System.Drawing.Point(159, 179);
+            this.getLastestBtn.Location = new System.Drawing.Point(168, 246);
             this.getLastestBtn.Name = "getLastestBtn";
             this.getLastestBtn.Size = new System.Drawing.Size(162, 48);
             this.getLastestBtn.TabIndex = 10;
@@ -369,12 +371,35 @@ namespace SupplementManagement
             this.getLastestBtn.UseVisualStyleBackColor = true;
             this.getLastestBtn.Click += new System.EventHandler(this.getLastestBtn_Click);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft JhengHei", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Yellow;
+            this.label2.Location = new System.Drawing.Point(17, 49);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(287, 38);
+            this.label2.TabIndex = 11;
+            this.label2.Text = "Revenue - Statistic";
+            // 
+            // usernameStatistic
+            // 
+            this.usernameStatistic.AutoSize = true;
+            this.usernameStatistic.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.usernameStatistic.Location = new System.Drawing.Point(1232, 49);
+            this.usernameStatistic.Name = "usernameStatistic";
+            this.usernameStatistic.Size = new System.Drawing.Size(108, 25);
+            this.usernameStatistic.TabIndex = 12;
+            this.usernameStatistic.Text = "Username:";
+            // 
             // Management
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(1509, 719);
+            this.ClientSize = new System.Drawing.Size(1539, 837);
+            this.Controls.Add(this.usernameStatistic);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.getLastestBtn);
             this.Controls.Add(this.searchBtn);
             this.Controls.Add(this.panel5);
@@ -391,8 +416,8 @@ namespace SupplementManagement
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.ImportTable)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ExportTable)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ImportTable)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel3.ResumeLayout(false);
@@ -427,7 +452,6 @@ namespace SupplementManagement
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Button searchBtn;
         private System.Windows.Forms.ToolStripMenuItem deliveryingGoodToolStripMenuItem;
-        private System.Windows.Forms.DataGridView ExportTable;
         private System.Windows.Forms.DataGridView ImportTable;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label1;
@@ -442,6 +466,9 @@ namespace SupplementManagement
         private System.Windows.Forms.ColumnHeader columnHeader8;
         private System.Windows.Forms.ColumnHeader columnHeader9;
         private System.Windows.Forms.Button getLastestBtn;
+        private System.Windows.Forms.DataGridView ExportTable;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label usernameStatistic;
     }
 }
 

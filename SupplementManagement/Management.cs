@@ -27,6 +27,7 @@ namespace SupplementManagement
                 return;
             }
             usernameTxt.Text += " " + currentAcc.Username.ToString();
+            usernameStatistic.Text += " " + currentAcc.Username.ToString();
             loadImportTable();
             loadExportTable();
         }
@@ -69,7 +70,7 @@ namespace SupplementManagement
         {
             String query = "Exec getImportStatistic";
             ImportTable.DataSource = DataProvider.Instance.ExecuteQuery(query);
-            ImportTable.AutoResizeColumns();
+            //ImportTable.AutoResizeColumns();
         }
         public void loadExportTable()
         {
@@ -81,7 +82,6 @@ namespace SupplementManagement
         private void ImportTable_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             int index = e.RowIndex;
-            
             if (index < 0 || index >= ImportTable.RowCount)
             {
                 return;
@@ -144,11 +144,12 @@ namespace SupplementManagement
         private void ExportTable_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             int index = e.RowIndex;
-            if (index < 0 || index >= ImportTable.RowCount)
+
+            if (index < 0 || index >= ExportTable.RowCount)
             {
                 return;
             }
-            DataGridViewRow row = ImportTable.Rows[index];
+            DataGridViewRow row = ExportTable.Rows[index];
             long id = (long)row.Cells[0].Value;
             loadDetail(id, "export");
         }
@@ -174,7 +175,6 @@ namespace SupplementManagement
             loadExportTable();
             loadImportTable();
         }
-
 
     }
 }
