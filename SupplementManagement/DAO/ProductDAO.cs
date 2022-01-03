@@ -47,6 +47,8 @@ namespace SupplementManagement.DAO
             return Product;
         }
 
+        
+
         public List<Product> getAllItemsByType(byte id)
         {
             List<Product> list = new List<Product>();

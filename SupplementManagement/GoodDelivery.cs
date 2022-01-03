@@ -87,22 +87,37 @@ namespace SupplementManagement
             listViewDetail.Items.Clear();
         }
 
-        private void updateStorage()
+        private bool updateStorage()
         {
-            MessageBox.Show("ass");
+            foreach (ListViewItem i in listViewDetail.Items)
+            {
+                long id = Int64.Parse(i.Tag.ToString());
+                int quantity = Int16.Parse(i.SubItems[3].Text);
+
+                Product temp = ProductDAO.Instance.GetProductById(id);
+                MessageBox.Show("Quantity here :" + quantity + "\nCurrent Inventory :" + temp.Inventory.ToString());
+                if (temp.Inventory < quantity)
+                {
+                    MessageBox.Show("Product: " + temp.Name + "\nOrder: " + quantity.ToString() + "\nBut in the inventory only: " + temp.Inventory.ToString());
+                    return false;
+                }
+            }
             foreach (ListViewItem i in listViewDetail.Items)
             {
                 long id = Int64.Parse(i.Tag.ToString());
                 int quantity = -Int16.Parse(i.SubItems[3].Text);
                 ProductDAO.Instance.updateStorage(id, quantity);
-                MessageBox.Show("ID :"+id.ToString()+"Quantity : " + quantity.ToString());
             }
+            return true;
         }
 
         private void checkOut()
         {
-            updateStorage();
-            confirmImport();
+            if (updateStorage())
+            {
+                confirmImport();
+                MessageBox.Show("Making Exort Detail Successfully.");
+            }
         }
 
 

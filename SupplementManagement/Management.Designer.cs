@@ -365,7 +365,7 @@ namespace SupplementManagement
             this.getLastestBtn.Name = "getLastestBtn";
             this.getLastestBtn.Size = new System.Drawing.Size(162, 48);
             this.getLastestBtn.TabIndex = 10;
-            this.getLastestBtn.Text = "Get Lastest ";
+            this.getLastestBtn.Text = "Get Latest ";
             this.getLastestBtn.UseVisualStyleBackColor = true;
             this.getLastestBtn.Click += new System.EventHandler(this.getLastestBtn_Click);
             // 
