@@ -279,24 +279,27 @@ namespace SupplementManagement
             // 
             // clearBtn
             // 
+            this.clearBtn.BackColor = System.Drawing.Color.Coral;
             this.clearBtn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.clearBtn.Location = new System.Drawing.Point(613, 23);
             this.clearBtn.Name = "clearBtn";
             this.clearBtn.Size = new System.Drawing.Size(110, 60);
             this.clearBtn.TabIndex = 8;
             this.clearBtn.Text = "Clear";
-            this.clearBtn.UseVisualStyleBackColor = true;
+            this.clearBtn.UseVisualStyleBackColor = false;
             this.clearBtn.Click += new System.EventHandler(this.clearBtn_Click);
             // 
             // btnDeleteItem
             // 
+            this.btnDeleteItem.BackColor = System.Drawing.Color.BurlyWood;
             this.btnDeleteItem.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeleteItem.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnDeleteItem.Location = new System.Drawing.Point(497, 23);
             this.btnDeleteItem.Name = "btnDeleteItem";
             this.btnDeleteItem.Size = new System.Drawing.Size(110, 60);
             this.btnDeleteItem.TabIndex = 7;
             this.btnDeleteItem.Text = "Delete";
-            this.btnDeleteItem.UseVisualStyleBackColor = true;
+            this.btnDeleteItem.UseVisualStyleBackColor = false;
             this.btnDeleteItem.Click += new System.EventHandler(this.btnDeleteItem_Click);
             // 
             // label1

@@ -21,6 +21,15 @@ namespace SupplementManagement.DAO
         private GoodImportDAO() { }
 
 
+        public GoodImport GetGoodImportbyId(long id)
+        {
+
+            string query = "Select * from GoodImport where id="+id;
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);           
+            GoodImport i = new GoodImport(data.Rows[0]);
+            return i;
+        }
+
         public List<DetailReceipt> GetDetailImport(long id)
         {
             List<DetailReceipt> list = new List<DetailReceipt>();
