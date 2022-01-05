@@ -78,7 +78,7 @@ namespace SupplementManagementTester
 
             foreach (long i in validSidList)
             {
-                //testWriteImportWithValidID(i);
+                testWriteImportWithValidID(i);
             }
             foreach (long i in inValidSidList)
             {
@@ -122,8 +122,11 @@ namespace SupplementManagementTester
         public bool compareExport(GoodExport a, GoodExport sample)
         {
             Console.WriteLine("ID:" + a.ID.ToString() + " and " + sample.ID.ToString());
-            Console.WriteLine("ID:" + a.SID.ToString() + " and " + sample.ID.ToString());
-            Console.WriteLine("ID:" + a.CID.ToString() + " and " + sample.CID.ToString());
+            Console.WriteLine("SID:" + a.SID.ToString() + " and " + sample.ID.ToString());
+            Console.WriteLine("CID:" + a.CID.ToString() + " and " + sample.CID.ToString());
+            Console.WriteLine("statusPayment:" + a.StatusPayment.ToString() + " and " + sample.StatusPayment.ToString());
+            Console.WriteLine("statusDelivery:" + a.StatusDelivery.ToString() + " and " + sample.StatusDelivery.ToString());
+            Console.WriteLine("exportDate:" + a.ExportDate.ToString() + " and " + sample.ExportDate.ToString());
 
             if (a.ID == sample.ID && a.SID == sample.SID && a.ExportDate == sample.ExportDate
                 && a.CID == sample.CID 
@@ -134,17 +137,48 @@ namespace SupplementManagementTester
             return false;
         }
 
+
         [TestMethod]
         [DataSource("Microsoft.VisualStudio.TestTools.DataSource.CSV",
-                @".\DataTestCase\ImportTestCase.txt", "ImportTestCase#csv", DataAccessMethod.Sequential)]
-        public void testStatisticWithDataSource()
+  @".\DataTestCase\ExportTestCase.csv", "ExportTestCase#csv", DataAccessMethod.Sequential)]
+        public void TestStatisticWithDataSourceExport()
         {
+
+            long id, sid, cid;
+            bool statusPayment;
+            string exportDate, statusDelivery, paymentType;
+            id = long.Parse(TestContext.DataRow[0].ToString());
+            cid = long.Parse(TestContext.DataRow[1].ToString());
+            sid = long.Parse(TestContext.DataRow[2].ToString());
+            paymentType = TestContext.DataRow[3].ToString();
+            statusPayment = TestContext.DataRow[4] == "0" ? false : true; 
+            statusDelivery = TestContext.DataRow[5].ToString();
+            exportDate = TestContext.DataRow[6].ToString();
+
+
+            Console.WriteLine(TestContext.DataRow[0]);
+
+            GoodExport sample = new GoodExport(id, cid, sid, statusPayment, statusDelivery, exportDate, paymentType);
+            GoodExport a = GoodExportDAO.Instance.GetGoodExportbyId(id);
+
+            bool expected = true;
+            Console.WriteLine(compareExport(a, sample));
+            //Assert.AreEqual(expected, compareExport(a, sample));
+
+
+        }
+
+                [TestMethod]
+        [DataSource("Microsoft.VisualStudio.TestTools.DataSource.CSV",
+                @".\DataTestCase\ImportTestCase.csv", "ImportTestCase#csv", DataAccessMethod.Sequential)]
+        public void TestStatisticWithDataSourceImport()
+        {
+
             long id, sid;
             string importDate;
             id = long.Parse(TestContext.DataRow[0].ToString());
             sid = long.Parse(TestContext.DataRow[1].ToString());
             importDate = TestContext.DataRow[2].ToString();
-
             GoodImport sample = new GoodImport(id, sid, importDate);
             GoodImport a = GoodImportDAO.Instance.GetGoodImportbyId(id);
 
@@ -153,5 +187,8 @@ namespace SupplementManagementTester
 
 
         }
+
+
+
     }
 }

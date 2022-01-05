@@ -36,6 +36,15 @@ namespace SupplementManagement.DAO
 
         }
 
+        public GoodExport GetGoodExportbyId(long id)
+        {
+
+            string query = "Select * from GoodExport where id=" + id;
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+            GoodExport i = new GoodExport(data.Rows[0]);
+            return i;
+        }
+
         public List<GoodExport> getWaitingOrders()
         {
             List<GoodExport> list = new List<GoodExport>();

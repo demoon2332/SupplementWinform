@@ -1,1 +1,8 @@
-﻿
+﻿id,cid,sid,paymentType,statusPayment,statusDelivery,exportDate
+1,2,1,Credit Cards,0,Waiting,12/29/2021 18:30:45 
+2,1,2,Momo Wallet,0,Waiting,01/01/2022 11:24:22
+3,1,1,Credit Cards,0,Waiting,01/01/2022 11:24:22 
+4,2,2,Cashes,1,Shipping,12/25/2021 16:24:54 
+5,3,1,Credit Cards,1,Done,11/23/2021 09:20:23 
+6,3,3,Momo Wallet,1,Shipping,1/24/2021 12:42:14 
+7,1,1,MoMo Wallet,0,Waiting,Jan  2 2022 12:49PM
